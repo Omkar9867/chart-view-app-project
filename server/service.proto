@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package timeSeries;
+
+// Define your time-series data point message
+message TimeSeriesDataPoint {
+  string timestamp = 1;
+  double value = 2;
+}
+
+// The time-series service definition.
+service TimeSeriesService {
+  // Method to stream time-series data points
+  rpc StreamTimeSeriesData (TimeSeriesRequest) returns (stream TimeSeriesDataPoint) {}
+}
+
+// Message to request time-series data
+message TimeSeriesRequest {
+  string start_time = 1; // Start time of the data range
+  string end_time = 2;   // End time of the data range
+}
