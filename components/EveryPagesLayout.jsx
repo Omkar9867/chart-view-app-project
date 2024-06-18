@@ -8,7 +8,7 @@ const EveryPagesLayout = (props) => {
             <NavBar />
             <div className="ml-20 bg-neutral-100">
                 <div className="ml-20">
-                    <Header title={props.title} subTitle={props.subTitle} />
+                    <Header label={props.label} title={props.title} subTitle={props.subTitle} />
                 </div>
                 {props.children}
             </div>
@@ -17,3 +17,5 @@ const EveryPagesLayout = (props) => {
 }
 
 export default EveryPagesLayout
+
+// EverPagesLayout max 3 props ( label, title, subTitle )

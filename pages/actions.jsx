@@ -6,7 +6,7 @@ import EveryPagesLayout from '../components/EveryPagesLayout';
 const ActionsPage = () => {
     return (
         <div>
-            <EveryPagesLayout title='Actions' subTitle='Running'>
+            <EveryPagesLayout label='Action History' title='Actions' subTitle='Running'>
                 <Actions />
             </EveryPagesLayout>
         </div>

@@ -8,9 +8,10 @@ const Header = (props) => {
             <header className="flex justify-between items-center mb-8 p-5 ">
                 <div className="flex gap-2">
                     <h1 className="text-2xl font-bold">{props.title}</h1>
-                    <span className="px-2 py-1 text-xs bg-green-500 text-white rounded mr-2 mt-2">{props.subTitle}</span>
+                    {props.subTitle && <span className="px-2 py-1 text-xs bg-green-500 text-white rounded mr-2 mt-2">{props.subTitle}</span>}
                 </div>
-                <Button icon={<RxCounterClockwiseClock />} label='Action-History' />
+
+                {props.label && <Button icon={<RxCounterClockwiseClock />} label={props.label} />}
             </header>
         </div>
     )
